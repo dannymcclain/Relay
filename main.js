@@ -1,43 +1,43 @@
-// const historyList = document.getElementById('history-list');
-//
-// function constructHistory(historyItems) {
-//   var i;
-//   for (i = 0; i < historyItems.length; i++) {
-//     var historyItem = document.createElement('li');
-//     var historyLink = document.createElement('a');
-//     historyLink.href = historyItems[i].url;
-//     historyLink.innerHTML = historyItems[i].title;
-//     historyItem.appendChild(historyLink);
-//     historyList.appendChild(historyItem);
-//     // console.log(historyItems[i]);
-//   }
-// }
-//
-// chrome.history.search({
-//       text: ''
-//     }, constructHistory);
+function getTabsByDevice(theDevices) {
+      let devices = []
 
-function showDevices(theDevices) {
-      var sessionList = document.getElementById('session-list');
-      var i;
-      for (i = 0; i < theDevices.length; i++) {
-        var device = document.createElement('h2');
-        // var device = document.createElement('li');
-        device.innerHTML = theDevices[i].deviceName;
-        // device.innerHTML = theDevices[i].deviceName + ' ' + theDevices[i].sessions[0].window.tabs[0].url;
-        sessionList.appendChild(device);
-        // console.log(theDevices[i].sessions[i].window.tabs);
-        console.log(theDevices[i]);
+      for(let i = 0; i < theDevices.length; i++){
+        let theDevice = theDevices[i];
+        let device = {
+          name: theDevice.deviceName,
+          tabs: []
+        }
+        devices = [...devices, device];
+        for(let j = 0; j < theDevice.sessions.length; j++){
+          let theSession = theDevice.sessions[j]
+          for(let k = 0; k < theSession.window.tabs.length; k++){
+            const {url , title} = theSession.window.tabs[k];
+            let newTab = {
+              url,
+              title,
+            }
+            device.tabs = [...device.tabs, newTab];
+          }
+        }
       }
+      return devices;
     }
-chrome.sessions.getDevices({},showDevices);
-//
-// function showTab(theTabs) {
-//     var i = 0;
-//     for (i = 0; i < theTabs.length; i++) {
-//       console.log(theTabs[i].tab.Tab.url)
-//     }
-//     // console.log(theTabs);
-// }
-//
-// chrome.tabs.query({}, showTab);
+
+function generateHtml (data) {
+  const tabsByDevice = getTabsByDevice(data);
+  var html = ``;
+  for(let i = 0; i < tabsByDevice.length; i++){
+    html += `<h2>${tabsByDevice[i].name}</h2>`
+    html += `<ul>`
+    for (let j = 0; j < tabsByDevice[i].tabs.length; j++){
+      html += `<li><a href="${tabsByDevice[i].tabs[j].url}">${tabsByDevice[i].tabs[j].title}</a></li>`
+    }
+    html += `</ul>`
+  }
+  console.log(html);
+  const container = document.getElementsByClassName('container')[0];
+  container.innerHTML = html;
+  console.log(container);
+}
+
+chrome.sessions.getDevices({},generateHtml);
