@@ -29,13 +29,13 @@ function showDevices(theDevices) {
       }
     }
 chrome.sessions.getDevices({},showDevices);
-
-function showTab(theTabs) {
-    var i = 0;
-    for (i = 0; i < theTabs.length; i++) {
-      console.log(theTabs[i].tab.Tab.url)
-    }
-    // console.log(theTabs);
-}
-
-chrome.tabs.query({}, showTab);
+//
+// function showTab(theTabs) {
+//     var i = 0;
+//     for (i = 0; i < theTabs.length; i++) {
+//       console.log(theTabs[i].tab.Tab.url)
+//     }
+//     // console.log(theTabs);
+// }
+//
+// chrome.tabs.query({}, showTab);
