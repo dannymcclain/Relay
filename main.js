@@ -21,8 +21,10 @@ function showDevices(theDevices) {
       var sessionList = document.getElementById('session-list');
       var i;
       for (i = 0; i < theDevices.length; i++) {
-        var device = document.createElement('li');
-        device.innerHTML = theDevices[i].deviceName + ' ' + theDevices[i].sessions[0].window.tabs[0].url;
+        var device = document.createElement('h2');
+        // var device = document.createElement('li');
+        device.innerHTML = theDevices[i].deviceName;
+        // device.innerHTML = theDevices[i].deviceName + ' ' + theDevices[i].sessions[0].window.tabs[0].url;
         sessionList.appendChild(device);
         // console.log(theDevices[i].sessions[i].window.tabs);
         console.log(theDevices[i]);
