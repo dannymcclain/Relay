@@ -21,7 +21,10 @@
     "newtab": "index.html"
   },
   "permissions": [
-    "history"
+    "history",
+    "sessions",
+    "tabs",
+    "storage"
   ],
   "author": "Danny McClain <dannyxmcclain@gmail.com> (dannymcclain.com)"
 }
