@@ -1,4 +1,4 @@
-function getTabsByDevice(theDevices) {
+ function getTabsByDevice(theDevices) {
       let devices = []
 
       for(let i = 0; i < theDevices.length; i++){
