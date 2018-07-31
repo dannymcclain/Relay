@@ -27,7 +27,7 @@ function generateHtml (data) {
   const tabsByDevice = getTabsByDevice(data);
   var html = ``;
   for(let i = 0; i < tabsByDevice.length; i++){
-    html += `<h2>${tabsByDevice[i].name}</h2>`
+    html += `<h2>&#9729; ${tabsByDevice[i].name}</h2>`
     html += `<ul>`
     for (let j = 0; j < tabsByDevice[i].tabs.length; j++){
       html += `<li><a href="${tabsByDevice[i].tabs[j].url}">${tabsByDevice[i].tabs[j].title}</a></li>`
