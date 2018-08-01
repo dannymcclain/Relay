@@ -77,3 +77,13 @@ li a:hover {
   background: rgba(50,118,254,0.10);
   transform: scale(1.015);
 }
+
+svg.cloud {
+  margin-right: 8px;
+  height: 9px;
+  margin-left: 1px;
+}
+
+/* svg.cloud g {
+  fill: #3377FF;
+} */
