@@ -38,8 +38,8 @@ body {
   }
 
 h2 {
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 600;
   color: #45474D;
   letter-spacing: -0.2px;
   margin-bottom: 10px;
@@ -86,24 +86,26 @@ svg.cloud {
   margin-left: 1px;
 }
 
-.madeby {
+a.madeby {
   font-weight: 500;
-  font-size: 11px;
-  color: #B6BAC2;
+  font-size: 13px;
+  color: #A8ABB3;
   letter-spacing: -0.2px;
+  display: block;
   text-align: center;
-  margin: 80px 0;
-}
-
-.madeby a {
-  font-weight: 700;
-  font-size: 11px;
-  color: #B6BAC2;
-  letter-spacing: -0.25px;
+  margin: 40px 0;
   text-decoration: none;
   transition: color 150ms ease-in-out;
 }
 
-.madeby a:hover {
+/* a.madeby {
+  font-weight: 700;
+  font-size: 11px;
+  color: #B6BAC2;
+  letter-spacing: -0.25px;
+
+} */
+
+a.madeby:hover {
   color: #3377FF;
 }

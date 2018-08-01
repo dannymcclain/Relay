@@ -32,7 +32,7 @@ function generateHtml(data) {
     }
     html += `</ul>`;
   }
-  html += `<p class="madeby">Made with &#x2728;by <a href="https://twitter.com/dannymcclain">Danny McClain</a></p>`;
+  html += `<a class="madeby" href="https://twitter.com/dannymcclain">Made by @dannymcclain</a>`;
   return html;
 }
 
