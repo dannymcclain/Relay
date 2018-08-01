@@ -49,7 +49,7 @@ ul {
   list-style: none;
   background: #FFFFFF;
   border-radius: 7px;
-  padding: 10px;
+  padding: 14px;
   margin-bottom: 40px;
   box-shadow: 0 8px 20px 0 #E6E8ED;
   /* border: 2px solid #E6E8ED; */
@@ -76,7 +76,7 @@ li a {
 li a:hover {
   background: #3377FF;
   color: #fff;
-  transform: scale(1.015);
+  transform: scale(1.02);
   /* background: rgba(50,118,254,0.10); */
 }
 
@@ -86,6 +86,24 @@ svg.cloud {
   margin-left: 1px;
 }
 
-/* svg.cloud g {
-  fill: #3377FF;
-} */
+.madeby {
+  font-weight: 500;
+  font-size: 11px;
+  color: #B6BAC2;
+  letter-spacing: -0.2px;
+  text-align: center;
+  margin: 80px 0;
+}
+
+.madeby a {
+  font-weight: 700;
+  font-size: 11px;
+  color: #B6BAC2;
+  letter-spacing: -0.25px;
+  text-decoration: none;
+  transition: color 150ms ease-in-out;
+}
+
+.madeby a:hover {
+  color: #3377FF;
+}
