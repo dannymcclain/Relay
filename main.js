@@ -1,43 +1,39 @@
- function getTabsByDevice(theDevices) {
-      let devices = []
+function getTabsByDevice(theDevices) {
+  return theDevices.map((device) => {
+    const sessions = device.sessions;
+    const tabs = getTabsFromSessions(sessions);
+    return {
+      name: device.deviceName,
+      tabs,
+    };
+  });
+}
 
-      for(let i = 0; i < theDevices.length; i++){
-        let theDevice = theDevices[i];
-        let device = {
-          name: theDevice.deviceName,
-          tabs: []
-        }
-        devices = [...devices, device];
-        for(let j = 0; j < theDevice.sessions.length; j++){
-          let theSession = theDevice.sessions[j]
-          for(let k = 0; k < theSession.window.tabs.length; k++){
-            const {url , title} = theSession.window.tabs[k];
-            let newTab = {
-              url,
-              title,
-            }
-            device.tabs = [...device.tabs, newTab];
-          }
-        }
-      }
-      return devices;
-    }
+function getTabsFromSessions(sessions) {
+  return sessions.reduce((acc, curr) => {
+    return [...acc, ...curr.window.tabs];
+  }, []);
+}
 
-function generateHtml (data) {
-  const tabsByDevice = getTabsByDevice(data);
+function generateHtml(data) {
+  // console.log(tabsByDevice);
   var html = ``;
-  for(let i = 0; i < tabsByDevice.length; i++){
-    html += `<h2>&#9729; ${tabsByDevice[i].name}</h2>`
+  for (let i = 0; i < data.length; i++) {
+    html += `<h2>${data[i].name}</h2>`
     html += `<ul>`
-    for (let j = 0; j < tabsByDevice[i].tabs.length; j++){
-      html += `<li><a href="${tabsByDevice[i].tabs[j].url}">${tabsByDevice[i].tabs[j].title}</a></li>`
+    for (let j = 0; j < data[i].tabs.length; j++) {
+      html += `<li><a href="${data[i].tabs[j].url}">${data[i].tabs[j].title}</a></li>`
     }
     html += `</ul>`
   }
-  console.log(html);
-  const container = document.getElementsByClassName('container')[0];
-  container.innerHTML = html;
-  console.log(container);
+  return html;
 }
 
-chrome.sessions.getDevices({},generateHtml);
+function renderHtmlToDom(data) {
+  const tabsByDevice = getTabsByDevice(data);
+  const html = generateHtml(tabsByDevice);
+  const container = document.getElementsByClassName('container')[0];
+  container.innerHTML = html;
+}
+
+chrome.sessions.getDevices({}, renderHtmlToDom);

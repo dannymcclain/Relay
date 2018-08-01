@@ -35,13 +35,13 @@ function getTabsFromSessions(sessions) {
 }
 
 function generateHtml(data) {
-  console.log(tabsByDevice);
+  // console.log(tabsByDevice);
   var html = ``;
-  for (let i = 0; i < tabsByDevice.length; i++) {
-    html += `<h2>${tabsByDevice[i].name}</h2>`
+  for (let i = 0; i < data.length; i++) {
+    html += `<h2>${data[i].name}</h2>`
     html += `<ul>`
-    for (let j = 0; j < tabsByDevice[i].tabs.length; j++) {
-      html += `<li><a href="${tabsByDevice[i].tabs[j].url}">${tabsByDevice[i].tabs[j].title}</a></li>`
+    for (let j = 0; j < data[i].tabs.length; j++) {
+      html += `<li><a href="${data[i].tabs[j].url}">${data[i].tabs[j].title}</a></li>`
     }
     html += `</ul>`
   }
