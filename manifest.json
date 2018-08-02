@@ -1,5 +1,5 @@
 {
-  "name": "Pickup",
+  "name": "Relay",
   "manifest_version": 2,
   "description": "Show tabs from your synced devices on your New Tab page.",
   "version": "0.0.1",
