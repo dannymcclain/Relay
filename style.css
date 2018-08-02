@@ -39,8 +39,8 @@ body {
 
 h2 {
   font-size: 16px;
-  font-weight: 600;
-  color: #666;
+  font-weight: 700;
+  color: #444;
   letter-spacing: -0.4px;
   margin-bottom: 10px;
 }
@@ -89,7 +89,7 @@ svg.cloud {
 a.madeby {
   font-weight: 500;
   font-size: 14px;
-  color: #666;
+  color: #444;
   letter-spacing: -0.2px;
   display: block;
   text-align: center;
