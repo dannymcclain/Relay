@@ -1,5 +1,3 @@
-# Pickup
+# 📡 Relay
 
-### Pick up where you left off.
-
-Show tabs from your synced devices on your New Tab page.
+A Chrome extension that shows tabs from your synced devices on your New Tab page.
