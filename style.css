@@ -42,11 +42,6 @@ h2 {
   color: #4A4A4A;
   letter-spacing: -0.4px;
   margin-bottom: 10px;
-  transition: color 200ms ease-in-out;
-}
-
-h2:hover {
-  color: #ccc;
 }
 
 ul {
