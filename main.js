@@ -18,12 +18,12 @@ function getTabsFromSessions(sessions) {
 function generateHtml(data) {
   var html = `<h1>&#x1F4E1;</h1>`;
   for (let i = 0; i < data.length; i++) {
-    html += `<h2>${data[i].name}</h2>`
+    html += `<div class="link-list"><h2>${data[i].name}</h2>`
     html += `<ul>`
     for (let j = 0; j < data[i].tabs.length; j++) {
       html += `<li><a href="${data[i].tabs[j].url}">${data[i].tabs[j].title}</a></li>`;
     }
-    html += `</ul>`;
+    html += `</ul></div>`;
   }
   html += `<a class="madeby" href="https://twitter.com/dannymcclain">Made by @dannymcclain</a>`;
   return html;

@@ -34,7 +34,7 @@ body {
 .container {
   width: 96%;
   max-width: 480px;
-  margin: 60px auto 0;
+  margin: 40px auto 0;
   }
 
 h1 {
@@ -42,25 +42,27 @@ h1 {
   font-size: 3em;
 }
 
-h2 {
-  font-family: 'SF Mono', Menlo, Consolas, monospace;
-  font-size: 10px;
-  font-weight: 700;
-  color: #4A4A4A;
-  background: #171717;
-  padding: 10px;
-  letter-spacing: -0.4px;
-  /* margin-bottom: 10px; */
-  text-align: left;
-}
-
-ul {
-  list-style: none;
+.link-list {
   background: #171717;
   border-radius: 7px;
   padding: 14px;
   margin-bottom: 40px;
   text-align: left;
+}
+
+h2 {
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: hsl(0, 0%, 35%);
+  /* background: #171717; */
+  padding: 10px;
+  /* letter-spacing: -0.4px; */
+  text-align: left;
+}
+
+ul {
+  list-style: none;
 }
 
 li a {
@@ -95,14 +97,14 @@ svg.cloud {
 }
 
 a.madeby {
+  /* font-family: 'SF Mono', Menlo, Consolas, monospace; */
+  font-size: 12px;
   font-weight: 500;
-  font-size: 14px;
-  color: #4A4A4A;
-  letter-spacing: -0.2px;
-  text-align: center;
+  color: hsl(0, 0%, 35%);
   margin: 40px 0;
   text-decoration: none;
   transition: color 100ms ease-in-out;
+  /* letter-spacing: -0.2px; */
 }
 
 a.madeby:hover {
