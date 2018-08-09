@@ -29,12 +29,18 @@ img {
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background: #000;
+  text-align: center;
 }
 .container {
   width: 96%;
   max-width: 480px;
-  margin: 40px auto 0;
+  margin: 60px auto 0;
   }
+
+h1 {
+  margin: 0 0 40px 0;
+  font-size: 3em;
+}
 
 h2 {
   font-size: 14px;
@@ -42,6 +48,7 @@ h2 {
   color: #4A4A4A;
   letter-spacing: -0.4px;
   margin-bottom: 10px;
+  text-align: left;
 }
 
 ul {
@@ -50,6 +57,7 @@ ul {
   border-radius: 7px;
   padding: 14px;
   margin-bottom: 40px;
+  text-align: left;
 }
 
 li a {
@@ -88,7 +96,6 @@ a.madeby {
   font-size: 14px;
   color: #4A4A4A;
   letter-spacing: -0.2px;
-  display: block;
   text-align: center;
   margin: 40px 0;
   text-decoration: none;
