@@ -16,7 +16,18 @@ function getTabsFromSessions(sessions) {
 }
 
 function generateHtml(data) {
-  var html = `<h1>&#x1F4E1;</h1>`;
+  var html = `
+      <svg class="logo" width="20px" height="20px" viewBox="0 0 20 20" version="1.1" 
+          <g id="Icons-Copy" stroke="none" fill="none" fill-rule="evenodd">
+              <g transform="translate(-6.000000, -6.000000)" fill="#F2F2F2" fill-rule="nonzero">
+                  <g id="relay-icon" transform="translate(6.000000, 6.000000)">
+                      <rect x="0" y="8" width="20" height="12" rx="2"></rect>
+                      <rect fill-opacity="0.7" x="2" y="4" width="16" height="2" rx="1"></rect>
+                      <rect fill-opacity="0.4" x="4" y="0" width="12" height="2" rx="1"></rect>
+                  </g>
+              </g>
+          </g>
+      </svg>`;
   for (let i = 0; i < data.length; i++) {
     html += `<div class="link-list"><h2>${data[i].name}</h2>`
     html += `<ul>`
