@@ -31,7 +31,7 @@ function generateHtml(data) {
       } else {
         favUrl = 'icons/default.png';
       };
-      html += `<li><a href="${data[i].tabs[j].url}"><img height="16" width="16" style="border-radius: 8px;" src="${favUrl}" alt="favicon"/> ${data[i].tabs[j].title}</a></li>`;
+      html += `<li><a href="${data[i].tabs[j].url}" target="_blank"><img height="16" width="16" style="border-radius: 8px;" src="${favUrl}" alt="favicon"/> ${data[i].tabs[j].title}</a></li>`;
     }
     html += `</ul></div>`;
   }
