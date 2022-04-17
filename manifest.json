@@ -12,9 +12,18 @@
     "256": "icons/icon-256.png"
   },
   "permissions": ["sessions", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["toggleIcon.js"]
+
+    }
+  ],
   "action": {
-    "default_popup": "index.html",
-    "default_icon": "icons/icon-256.png"
+    "default_popup": "index.html"
   },
   "author": "Danny McClain <dannyxmcclain@gmail.com> (https://twitter.com/dannymcclain)"
 }
