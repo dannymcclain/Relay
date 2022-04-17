@@ -20,8 +20,9 @@ ol, ul {
   list-style: none;
 }
 
-
-/* STYLES */
+/* -------------------------------
+DEFAULT STYLES
+------------------------------- */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background: #FFFFFF;
@@ -41,12 +42,16 @@ h1 {
   font-weight: 700;
   font-size: 13px;
   line-height: 1;
-  color: #000000;
+  color: #202124;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 8px;
   padding: 12px;
+}
+
+.device-icon > path {
+  fill: currentColor;
 }
 
 .link-list {
@@ -86,7 +91,7 @@ li a {
   font-size: 13px;
   line-height: 1;
   letter-spacing: -0.01em;
-  color: #333333;
+  color: #202124;
   text-decoration: none;
 }
 
@@ -100,7 +105,32 @@ li a .link-title {
 }
 
 li a:hover {
-  background: #ebebeb;
-  /* background: #000;
-  color: #fff; */
+  background: #E2E2E3;
+}
+
+/* -------------------------------
+DARK MODE STYLES
+------------------------------- */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #29292D;
+  }
+  .container {
+    background: #29292D;
+    }
+  
+  h1 {  
+    color: #E7EAED;
+  }
+  
+  li a {
+    color: #E7EAED;
+  }
+  
+  li a:hover {
+    background: #414346;
+    color: #fff;
+  }
+
+
 }

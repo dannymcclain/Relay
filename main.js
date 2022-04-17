@@ -36,8 +36,8 @@ function getTabsFromSessions(sessions) {
 
 function generateHtml(data) {
   for (let i = 0; i < data.length; i++) {
-    html += `<div class="link-list"><h1><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3 3.5H14.5V2H3C2.175 2 1.5 2.675 1.5 3.5V11.75H0V14H8.5V11.75H3V3.5ZM15.25 5H10.75C10.3375 5 10 5.3375 10 5.75V13.25C10 13.6625 10.3375 14 10.75 14H15.25C15.6625 14 16 13.6625 16 13.25V5.75C16 5.3375 15.6625 5 15.25 5ZM14.5 11.75H11.5V6.5H14.5V11.75Z" fill="black"/>
+    html += `<div class="link-list"><h1><svg class="device-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3 3.5H14.5V2H3C2.175 2 1.5 2.675 1.5 3.5V11.75H0V14H8.5V11.75H3V3.5ZM15.25 5H10.75C10.3375 5 10 5.3375 10 5.75V13.25C10 13.6625 10.3375 14 10.75 14H15.25C15.6625 14 16 13.6625 16 13.25V5.75C16 5.3375 15.6625 5 15.25 5ZM14.5 11.75H11.5V6.5H14.5V11.75Z" />
     </svg>
     ${data[i].name}</h1>`
     html += `<ul>`
