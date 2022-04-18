@@ -81,9 +81,6 @@ li a {
   flex-direction: row;
   gap:8px;
   align-items: center;
-
-  /* transition: color 100ms ease-in-out, background 100ms ease-in-out; */
-  
   padding: 12px;
   border-radius: 8px;
   font-style: normal;
@@ -93,6 +90,8 @@ li a {
   letter-spacing: -0.01em;
   color: #202124;
   text-decoration: none;
+  border: 2px solid transparent;
+  transition: border-color 100ms ease-in-out, background 100ms ease-in-out;
 }
 
 li a .link-title {
@@ -105,7 +104,8 @@ li a .link-title {
 }
 
 li a:hover {
-  background: #E2E2E3;
+  background: #ECF5FD;
+  border: 2px solid #1A8CFF;
 }
 
 /* -------------------------------
@@ -128,8 +128,8 @@ DARK MODE STYLES
   }
   
   li a:hover {
-    background: #414346;
-    color: #fff;
+    background: #213852;
+    border: 2px solid #1A8CFF;
   }
 
 
