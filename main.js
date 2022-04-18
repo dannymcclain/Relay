@@ -1,4 +1,4 @@
-let html;
+let html = ``;
 let tabsByDevice;
 let container;
 
