@@ -1,4 +1,5 @@
 chrome.runtime.onMessage.addListener(function(request) {
+    console.log(request.scheme);
     if (request.scheme == "dark" )
         chrome.browserAction.setIcon({
             path: {

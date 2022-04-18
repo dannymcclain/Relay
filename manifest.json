@@ -19,7 +19,6 @@
     {
       "matches": ["<all_urls>"],
       "js": ["toggleIcon.js"]
-
     }
   ],
   "action": {
