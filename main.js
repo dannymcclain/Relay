@@ -5,9 +5,13 @@ let container;
 function getTabsByDevice(theDevices) {
   return theDevices.map((device) => {
     const sessions = device.sessions;
+    let lastModified = new Date(sessions[0].lastModified*1000)
+    let dateModified = lastModified.toLocaleString();
+    console.log(device.deviceName + ': ' + dateModified);
     const tabs = getTabsFromSessions(sessions);
     return {
       name: device.deviceName,
+      dateModified: dateModified,
       tabs,
     };
   });
