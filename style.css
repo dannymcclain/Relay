@@ -50,6 +50,15 @@ h1 {
   padding: 12px;
 }
 
+.last-modified {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1;
+  color: #999999;
+  margin-left: 36px;
+  margin-bottom: 8px;
+}
+
 .device-icon > path {
   fill: currentColor;
 }

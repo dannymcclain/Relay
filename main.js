@@ -25,11 +25,17 @@ function getTabsFromSessions(sessions) {
 
 function generateHtml(data) {
   for (let i = 0; i < data.length; i++) {
-    html += `<div class="link-list"><h1><svg class="device-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M2.5 12V3.5H15V3C15 2.44772 14.5523 2 14 2H2C1.44772 2 1 2.44772 1 3V12C0.447715 12 0 12.4477 0 13C0 13.5523 0.447715 14 1 14H8V12H2.5Z" />
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M11 5.5C10.4477 5.5 10 5.94772 10 6.5V14C10 14.5523 10.4477 15 11 15H15C15.5523 15 16 14.5523 16 14V6.5C16 5.94772 15.5523 5.5 15 5.5H11ZM11.5 7V13H14.5V7H11.5Z" />
-    </svg>
-    ${data[i].name}</h1>`
+    html += `<div class="link-list">
+    <div clas="header">
+      <h1>
+        <svg class="device-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.5 12V3.5H15V3C15 2.44772 14.5523 2 14 2H2C1.44772 2 1 2.44772 1 3V12C0.447715 12 0 12.4477 0 13C0 13.5523 0.447715 14 1 14H8V12H2.5Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11 5.5C10.4477 5.5 10 5.94772 10 6.5V14C10 14.5523 10.4477 15 11 15H15C15.5523 15 16 14.5523 16 14V6.5C16 5.94772 15.5523 5.5 15 5.5H11ZM11.5 7V13H14.5V7H11.5Z" />
+      </svg>
+      ${data[i].name}
+      </h1>
+      <p class="last-modified">Updated: ${data[i].dateModified}</p>
+      </div>`
     html += `<ul>`
     for (let j = 0; j < data[i].tabs.length; j++) {
       let favicon = data[i].tabs[j].favIconUrl;
